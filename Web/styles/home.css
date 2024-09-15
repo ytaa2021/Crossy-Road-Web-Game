@@ -1,0 +1,85 @@
+body, html {
+background-color: #ffd1d1;
+}
+
+
+
+.titulo_placeholder {
+    background-color: red;
+
+}
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Silkscreen', sans-serif;
+    background-image: url("../media/img/fondoautores.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.cell {
+    width: 200px;
+    height: 200px;
+    border: 4px solid rgb(124, 39, 39);
+    border-radius: 20px;
+    margin: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    cursor: pointer;
+}
+
+.cell:hover {
+    transform: scale(1.1);
+}
+
+.cell img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.cell .title {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px 0;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.cell.expanded {
+    width: 400px;
+    height: 400px;
+    z-index: 2;
+    margin: 0;
+}
+
+.cell.expanded .title {
+    border-radius: 0;
+}
+
+.description {
+    width: 90vw;
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}

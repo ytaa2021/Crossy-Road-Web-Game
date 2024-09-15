@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--Importamos navbar con JQuery-->
+    <script src="//code.jquery.com/jquery.min.js"></script>
+    <script>
+        $.get("../components/navbar/navbar.html", function (data) {
+            $("#nav-placeholder").replaceWith(data);
+        });
+    </script>
+
+    <!--IMPORTAMOS FUENTE DESDE GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+20&family=Silkscreen:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <!--Hoja de estilos-->
+    <link rel="stylesheet" href="./../styles/referencias.css">
+    <link rel="stylesheet" href="./../styles/general.css">
+
+
+
+</head>
+
+
+<body>
+    <div id="nav-placeholder"></div>
+
+    <div class="titulo_placeholder">
+        <h1 class="titulo">
+            Referencias
+        </h1>
+    </div>
+    <div id="referencias_placeholder">
+        <div class="regcontainer">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="content-container">
+                <ul class="reference-list">
+                    <li><a href="https://api.jquery.com" class="ref-link"><i class="icon jquery"></i>JQuery API</a></li>
+                    <li><a href="https://developers.google.com/fonts/docs/developer_api" class="ref-link"><i class="icon googlefonts"></i>Google Fonts API</a></li>
+                    <li><a href="http://www.w3.org/2000/svg" class="ref-link"><i class="icon w3"></i>W3 Iconos</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API" class="ref-link"><i class="icon canvasapi"></i>HTML Canvas API</a></li>
+                    <li><a href="https://www.w3schools.com/graphics/canvas_images.asp" class="ref-link"><i class="icon canvasimg"></i>Canvas Imagenes</a></li>
+                    <li><a href="https://www.w3schools.com/css/css3_animations.asp" class="ref-link"><i class="icon cssanim"></i>CSS Animaciones</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Events" class="ref-link"><i class="icon jsevents"></i>JavaScript Eventos</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction" class="ref-link"><i class="icon htmldom"></i>HTML DOM</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries" class="ref-link"><i class="icon respdesign"></i>Diseño Responsivo</a></li>
+                </ul>
+            </div>
+            
+        </div>
+
+    </div>
+</body>
+
+
+</html>

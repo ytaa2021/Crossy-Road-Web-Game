@@ -1,0 +1,41 @@
+.titulo_placeholder {
+    background-color: rgb(12, 12, 151);
+}
+
+body{
+    background-image: url("../media/img/ciudad.avif");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#juego_placeholder {
+    padding-top: 10vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 90vh;
+    width: 100vw;
+
+    background-color: rgba(18, 10, 47, 0.445);
+}
+
+#juego {
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+}
+
+.menuButton {
+    background-color: #007bff;
+    color: white;
+    transition: all 0.3s;
+    width: 300px;
+    height: 70px;
+}
+
+.menuButton:hover {
+    background-color: #112c48;
+    color: #f8f9fa;
+}
+

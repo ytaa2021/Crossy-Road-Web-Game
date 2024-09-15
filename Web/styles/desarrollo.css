@@ -1,0 +1,44 @@
+.titulo_placeholder{
+    background-color: purple;
+    
+}
+body {
+    background-image: url('../media/img/fondo.jpg');
+    background-size: cover; /* Cubre todo el área visible, puede cortar partes de la imagen */
+    background-position: center; /* Centra la imagen en la página */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center 10vh;
+}
+
+.buttons-container button {
+    padding: 10px 20px;
+    margin: 10px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top:13vh;
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 8px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.607);
+}
+.content {
+    margin-top: 20px;
+    padding: 20px;
+    color: white;
+    border-radius: 5px;
+}
+
+
+.button-color1 { background-color: #ea5c5c; } 
+.button-color2 { background-color: hsla(120, 68%, 69%, 0.938); }
+.button-color3 { background-color: #7c7cd0; }
+.button-color4 { background-color: #c16dc1; } 
+.button-color5 { background-color: #e2e67a; } 
+.button-color6 { background-color: #dfae59; } 
+.subtitulo {
+    font-family: 'Jersey 20', sans-serif;
+}
+.texto {
+    font-family: 'Jersey 20', sans-serif;
+}

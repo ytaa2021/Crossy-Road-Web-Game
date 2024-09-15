@@ -1,0 +1,202 @@
+/* lo que desplegamos */
+#nav_overlay {
+    z-index: 9;
+    /*Necesitamos que ocupe toda la pantalla y esté fijo*/
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    height: 100svh;
+    /*por ahora, el fondo será transparente-negro*/
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+/*Para que no se muestren el "fomato link" de los links del navbar*/
+a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.3s;
+}
+
+/*centramos todos los elementos*/
+.nav_elements li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+/*Formato para deslizar a la derecha el menú overlay*/
+.deslizamiento_derecha {
+    transition: all 0.4s ease-in-out;
+    transform: translateX(0%);
+}
+
+/*Formato para deslizar a la izquierda el menú overlay*/
+.deslizamiento_izquierda {
+    transition: all 0.8s ease-in-out;
+    transform: translateX(-100%);
+}
+
+/*proporciones de la lista*/
+nav ul {
+    height: 100vh;
+    width: inherit;
+    list-style: none;
+
+}
+
+/*Damos formato diferente a cada elemento del menú por separado*/
+nav ul li {
+    height: 16.666%;
+    width: 100%;
+}
+
+#nav_index {
+    background-color: red;
+}
+
+#nav_juego {
+    background-color: rgb(12, 12, 151);
+}
+
+#nav_descripcion {
+    background-color: green;
+}
+
+#nav_desarrollo {
+    background-color: purple;
+}
+
+#nav_multimedia {
+    background-color: rgb(107, 155, 35);
+}
+
+#nav_referencias {
+    background-color: grey;
+}
+
+nav li a {
+    /*Fuente importada desde google fonts*/
+    font-family: 'Jersey 20', sans-serif;
+    letter-spacing: 0.4rem;
+    font-size: 2.5rem;
+}
+
+/*grande cuando pasemos el cursor*/
+nav li a:hover,
+nav li a:active {
+    transform: scale(1.2);
+}
+
+
+/*ANIMACIÓN DEL DESLIZAMIENTO
+Esta animación está inspirada por otra encontrada en un repositorio
+Referencia: https://github.com/krishandeep17/my-portfolio
+*/
+
+/*Son cada una de las animaciónes descritas en navbar.js por la función de navAnimation.
+*/
+
+.slide-in-1 {
+    animation: slide-in 0.4s linear 0s both;
+
+}
+
+.slide-in-2 {
+    animation: slide-in 0.4s linear 0.1s both;
+}
+
+.slide-in-3 {
+    animation: slide-in 0.4s linear 0.2s both;
+}
+
+.slide-in-4 {
+    animation: slide-in 0.4s linear 0.3s both;
+}
+
+.slide-in-5 {
+    animation: slide-in 0.4s linear 0.4s both;
+}
+
+.slide-in-6 {
+    animation: slide-in 0.4s linear 0.5s both;
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+/*ANIMACIÓN contraria para cerrar el menú de navegación*/
+
+.slide-out-1 {
+    animation: slide-out 0.3s linear 0.6s both;
+}
+
+.slide-out-2 {
+    animation: slide-out 0.3s linear 0.5s both;
+}
+
+.slide-out-3 {
+    animation: slide-out 0.3s linear 0.4s both;
+}
+
+.slide-out-4 {
+    animation: slide-out 0.3s linear 0.3s both;
+}
+
+.slide-out-5 {
+    animation: slide-out 0.3s linear 0.2s both;
+}
+
+.slide-out-6 {
+    animation: slide-out 0.3s linear 0.1s both;
+}
+
+@keyframes slide-out {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+
+
+/*este menú lo tendré que cambiar por un cochecito que se mueva*/
+.hamburger-menu {
+    position: fixed;
+    top: 2.5vh;
+    right: 3vw;
+    z-index: 10;
+    cursor: pointer;
+
+}
+
+#menu_img {
+    height: 5vh;
+    width: 5vw;
+}
+
+/*grande cuando pasemos el cursor*/
+#menu_img:hover {
+    transform: scale(1.2);
+    transition: all 0.3s;
+}
+
+/* Al salir del hover */
+#menu_img {
+    transition: all 0.3s;
+}

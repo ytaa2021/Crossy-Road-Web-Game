@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Importamos el navbar con JQuery-->
+    <script src="//code.jquery.com/jquery.min.js"></script>
+    <script>
+        $.get("./components/navbar/navbar.html", function (data) {
+            $("#nav-placeholder").replaceWith(data);
+        });
+    </script>
+
+    <!--IMPORTAMOS FUENTE DESDE GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+20&family=Silkscreen:wght@400;700&display=swap"
+        rel="stylesheet">
+
+
+    <!--Hoja de estilos-->
+    <link rel="stylesheet" href="./styles/home.css">
+    <link rel="stylesheet" href="./styles/general.css">
+</head>
+
+<body>
+    <div id="nav-placeholder"></div>
+    <div class="titulo_placeholder">
+        <h1 class="titulo">
+            Autores
+        </h1>
+    </div>
+
+    <div class="container">
+        <div class="cell" data-description="Me he encargado de la parte de backend y lógica del juego. ">
+            <img src="/media/img/alvaro.png" alt="Persona 1">
+            <div class="title">Alvaro</div>
+        </div>
+        <div class="cell" data-description="Me he encargado de una parte de la implementación de Gstreamer ">
+            <img src="/media/img/david.png" alt="Persona 2">
+            <div class="title">David</div>
+        </div>
+        <div class="cell" data-description="Me he encargado de ">
+            <img src="/media/img/monica.png" alt="Persona 3">
+            <div class="title">Monica</div>
+        </div>
+        <div class="cell" data-description="Me he encargado de ">
+            <img src="/media/img/yotam.png" alt="Persona 4">
+            <div class="title">Yotam</div>
+        </div>
+    </div>
+
+    <div class="description" style="display: none;"></div>
+
+    <script>
+        $(".cell").click(function () {
+            $(".description").hide();
+            $(".cell").removeClass("expanded");
+            $(this).toggleClass("expanded");
+            var descriptionText = $(this).attr("data-description");
+            $(".description").text(descriptionText).fadeIn();
+        });
+    </script>
+</body>
+
+</html>

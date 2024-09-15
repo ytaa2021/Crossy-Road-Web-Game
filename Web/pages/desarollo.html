@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="../logic/desarrollo.js"></script>
+    <!--Importamos navbar con JQuery-->
+    <script src="//code.jquery.com/jquery.min.js"></script>
+    <script>
+        $.get("../components/navbar/navbar.html", function (data) {
+            $("#nav-placeholder").replaceWith(data);
+        });
+    </script>
+
+
+    <!--IMPORTAMOS FUENTE DESDE GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+20&family=Silkscreen:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <!--Hoja de estilos-->
+    <link rel="stylesheet" href="./../styles/desarrollo.css">
+    <link rel="stylesheet" href="./../styles/general.css">
+
+
+
+</head>
+
+<body>
+    <div id="nav-placeholder"></div>
+
+    <div class="titulo_placeholder">
+        <h1 class="titulo">
+            Desarrollo
+        </h1>
+    </div>
+    
+    <div class="buttons-container">
+        <button class="button-color1" onclick="showContent('responsabilidades')">Responsabilidades</button>
+        <button class="button-color2" onclick="showContent('tecnicas')">Técnicas y tecnologías</button>
+        <button class="button-color3" onclick="showContent('problemas')">Problemas y dificultades</button>
+        <button class="button-color4" onclick="showContent('puntos_fuertes')">Puntos fuertes</button>
+        <button class="button-color5" onclick="showContent('plan_inicial')">Plan inicial</button>
+        <button class="button-color6" onclick="showContent('plan_final')">Plan final</button>
+    </div>
+
+    <div id="responsabilidades" class="content" style="display:none; background-color: #ea5c5c">
+        <h2 class="subtitulo">Responsabilidades</h2>
+        <br>
+        <p class="texto"></p>
+    </div>
+    <div id="tecnicas" class="content" style="display:none;background-color: hsla(120, 68%, 69%, 0.938)">
+        <h2 class="subtitulo">Técnicas y tecnologías</h2>
+        <br>
+        <p class="texto">Me voy a arrancar los ojos</p>
+    </div>
+    <div id="problemas" class="content" style="display:none;background-color: #7c7cd0">
+        <h2 class="subtitulo">Problemas y dificultades</h2>
+        <br>
+        <p class="texto">El principal problema que hemos tenido que afrontar ha sido la desorganización debido
+            a que cada persona iba programando después de la anterior en vez de dividir desde un principio las partes del proyecto.
+            Por este motivo cuando uno iba a programar se tenía que poner al día con la información del grupo de WhatsApp y con
+            el código que teníaen el repositorio.</p>
+    </div>
+    <div id="puntos_fuertes" class="content" style="display:none;background-color: #c16dc1">
+        <h2 class="subtitulo">Destacar los puntos fuertes del proyecto</h2>
+        <br>
+        <p class="texto">Que es muy chuli</p>
+    </div>
+    <div id="plan_inicial" class="content" style="display:none;background-color: #e2e67a">
+        <h2 class="subtitulo">Plan inicial</h2>
+        <br>
+        <p class="texto"> Aquí va un invent</p>
+    </div>
+    <div id="plan_final" class="content" style="display:none;background-color: #dfae59">
+        <h2 class="subtitulo">Plan final</h2>
+        <br>
+        <p class="texto"> Aquí va otro</p>
+    </div>
+    
+    <script>
+        function showContent(sectionId) {
+            // Oculta todas las secciones
+            var contents = document.querySelectorAll('.content');
+            contents.forEach(function(content) {
+                content.style.display = 'none';
+            });
+        
+            // Muestra la sección específica
+            var showSection = document.getElementById(sectionId);
+            showSection.style.display = 'block';
+        }
+        </script>
+                
+</body>
+
+</html>

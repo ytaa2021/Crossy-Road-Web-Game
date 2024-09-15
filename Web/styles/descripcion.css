@@ -1,0 +1,96 @@
+.titulo_placeholder {
+    background-color: green;
+    margin-top: -13vh;
+}
+#nav_placeholder{
+    z-index: 9999;
+}
+
+body {
+    background-image: url('../media/img/fondodesc.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position: center 10vh;
+
+}
+
+.content {
+    margin-top: 20px;
+    padding: 20px;
+    color: white;
+    border-radius: 5px;
+}
+
+.desarrollo {
+    width: 93%;
+    padding: 20px;
+    margin: 20px;
+    margin-left: 20px;
+    border-radius: 100px;
+    box-shadow: 0 0 10px rgba(24, 23, 24, 0.715);
+    background-color: hsla(120, 68%, 69%, 0.938);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    background: none;
+    margin-top: 13vh;
+}
+
+#slider-container {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider {
+    width: 60%;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* Puedes usar 'contain' para asegurarte de que la imagen completa sea visible */
+    object-position: center;
+    /* Centra la imagen en el contenedor */
+}
+
+.subtitulo {
+    font-family: 'Jersey 20', sans-serif;
+    font-size: 30px;
+}
+
+.texto {
+    font-family: 'Jersey 20', sans-serif;
+    font-size: 20px;
+}
